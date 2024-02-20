@@ -1,14 +1,28 @@
-<div class="center padding-1em">
-    Iot Panel
-</div>
-<div class="center padding-1em">
-    <mat-form-field>
-        <mat-label>Select an option</mat-label>
-        <mat-select>
-            <mat-option>None</mat-option>
-            <mat-option value="option1">Option 1</mat-option>
-            <mat-option value="option2">Option 2</mat-option>
-            <mat-option value="option3">Option 3</mat-option>
-        </mat-select>
-    </mat-form-field>
-</div>
+<mat-grid-list cols="1" rowHeight="5em" style="padding-bottom: 0 !important;">
+    <mat-grid-tile class="tile" colspan="1">
+        <div class="tile-cell center" style="margin-bottom: 0">
+            Header
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="5" class="central-container">
+    <mat-grid-tile class="navigation tile" [colspan]="isLargeScreen ? 1 : 0">
+        <div class="tile-cell center" style="margin-right: 0">
+            Navigation
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="content tile" [colspan]="isLargeScreen ? 4 : 5">
+        <div class="tile-cell center">
+            Content
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="1" rowHeight="5em">
+    <mat-grid-tile class="tile">
+        <div class="tile-cell center" style="margin-top: 0">
+            Footer
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+
+  

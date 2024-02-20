@@ -1,0 +1,37 @@
+.tile {
+    
+}
+
+.tile-cell {
+    background-color: rgb(240, 240, 240);
+    border-radius: 0.5em;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    margin: 0.5em;
+    border: 1px solid lightgrey;
+}
+
+.central-container {
+    padding-bottom: 0 !important;
+    height: calc(100vh - 10em);
+}
+
+.navigation {
+    height: -webkit-fill-available;
+}
+
+.content {
+    height: -webkit-fill-available;
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    
+}
+
+

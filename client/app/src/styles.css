@@ -1,4 +1,5 @@
 @import './app/styles/utils.css';
+@import './app/styles/layout.css';
 
 body {
     margin: 0;
