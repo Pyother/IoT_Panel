@@ -3,6 +3,8 @@ const path = require('path');
 const app = express();
 const start = require('./app.js');
 
+const osRouter = require('./routes/osRouter');
+
 app.use(express.static(path.join(__dirname, '../../client/app/dist/app/browser')));
 
 app.get('/', (request, response) => {
@@ -13,3 +15,5 @@ app.listen(process.env.PORT || 3000, () => {
     console.log(' App: http://localhost:3000/');
     start();
 });
+
+app.use('/os', osRouter);
