@@ -5,9 +5,9 @@ const getOsInfo = require('./services/os_services/OSRecognition');
 
 const start = () => {
     logWithColor("IoT Panel started ✓", "green");
-    console.log(getOsInfo());
+    //console.log(getOsInfo());
     //startMonitoring();
-    mqttController('mqtt://test.mosquitto.org', 'AreaExplorer');
+    //mqttController('mqtt://test.mosquitto.org', 'AreaExplorer');
 };
 
 module.exports = start;
