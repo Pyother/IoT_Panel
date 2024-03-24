@@ -1,14 +1,14 @@
-.tile {
-    
+.app-header {
+    width: 100%;
 }
 
 .tile-cell {
-    background-color: rgb(240, 240, 240);
+    background-color: var(--foreground-color);
     border-radius: 0.5em;
     width: -webkit-fill-available;
     height: -webkit-fill-available;
     margin: 0.5em;
-    border: 1px solid lightgrey;
+    border: 2px solid rgb(242, 241, 241);
 }
 
 .central-container {

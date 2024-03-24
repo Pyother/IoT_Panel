@@ -1,5 +1,7 @@
 @import './app/styles/utils.css';
 @import './app/styles/layout.css';
+@import './app/header/header.component.css';
+@import './variables.scss';
 
 body {
     margin: 0;
@@ -7,6 +9,6 @@ body {
     height: 100vh;
     position: absolute;
     top: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Comfortaa", sans-serif;
 }
 

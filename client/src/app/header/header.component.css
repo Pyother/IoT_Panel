@@ -1,0 +1,40 @@
+.app-header {
+    width: 100%;
+}
+
+.right-content {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+}
+
+.title {
+    margin-left: 0.5em;
+    margin-top: 0.2em;
+    display: flex;
+}
+
+.title-text-1 {
+    font-weight: bold;
+    font-size: larger;
+    margin-left: 0.5em;
+}
+
+.title-text-2 {
+    font-weight: bold;
+    font-size: larger;
+    margin-left: 0.25em;
+    color: #aaa8b1;
+}
+
+.unvisible-button {
+    border: 0;
+}
+
+.logo {
+    width: 3em;
+}
+
+
+
+  
