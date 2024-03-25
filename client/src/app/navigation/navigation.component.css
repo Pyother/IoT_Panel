@@ -1,0 +1,28 @@
+.button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background: inherit;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-container:hover {
+    background: linear-gradient(to right bottom, #f5f5f5, #ffffff);
+}
+
+.mat-divider {
+    border-top-width: 1px;
+    border-top-color: #aaa8b1;
+}
+
+.mat-icon {
+    color: #aaa8b1;
+}
+
+.mat-button {
+    width: 100%;
+    margin: 1em;
+    text-align: left !important;
+}
+

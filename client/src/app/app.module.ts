@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component'; 
 import { HeaderComponent } from './header/header.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import { HeaderComponent } from './header/header.component';
     BrowserModule,
     MatFormFieldModule,
     MatGridListModule,
-    HeaderComponent,
     HttpClientModule,
+    HeaderComponent,
+    NavigationComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

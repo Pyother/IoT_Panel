@@ -2,13 +2,17 @@
     width: 100%;
 }
 
+.app-navigation {
+    width: 100%;
+}
+
 .tile-cell {
     background-color: var(--foreground-color);
     border-radius: 0.5em;
     width: -webkit-fill-available;
     height: -webkit-fill-available;
     margin: 0.5em;
-    border: 2px solid rgb(242, 241, 241);
+    border: 1px solid #aaa8b1;
 }
 
 .central-container {
