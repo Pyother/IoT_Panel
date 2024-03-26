@@ -12,3 +12,7 @@ Głównym celem projektu jest stworzenie panelu kontrolnego do sterowania urząd
 * Dashboard - panel wizualizacji najważniejszych danych sprzętowych
 * Panel zdalnego sterowania pojazdem 
 * Panel śledzenia trasy
+
+## Wstępna wizualizacja designu: 
+
+![alt text](image.png)
