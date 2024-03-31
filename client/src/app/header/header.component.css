@@ -2,6 +2,10 @@
     width: 100%;
 }
 
+.mat-toolbar {
+    padding: 0 !important;
+}
+
 .right-content {
     display: flex;
     width: 100%;
@@ -16,13 +20,11 @@
 
 .title-text-1 {
     font-weight: bold;
-    font-size: larger;
     margin-left: 0.5em;
 }
 
 .title-text-2 {
     font-weight: bold;
-    font-size: larger;
     margin-left: 0.25em;
     color: #aaa8b1;
 }
@@ -33,6 +35,18 @@
 
 .logo {
     width: 3em;
+}
+
+@media (max-width: 768px) {
+    .title-text-1, .title-text-2 {
+        font-size: x-large;
+    }
+}
+
+@media (min-width: 768px) {
+    .title-text-1, .title-text-2 {
+        font-size: xx-large;
+    }
 }
 
 

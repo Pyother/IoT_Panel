@@ -8,11 +8,10 @@
 
 .tile-cell {
     background-color: var(--foreground-color);
-    border-radius: 0.5em;
     width: -webkit-fill-available;
     height: -webkit-fill-available;
-    margin: 0.5em;
-    border: 1px solid #aaa8b1;
+    margin: 1em;
+    /*border: 1px solid;*/
 }
 
 .central-container {
