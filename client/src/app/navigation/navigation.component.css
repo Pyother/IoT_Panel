@@ -1,78 +1,39 @@
 .navigation-container {
-    width: 100%;
+    background-color: #F6F4F5;
+    border-radius: 0.5em;
+    width: calc(100% - 2px - 1em);
     height: 100%;
+    padding: 0.5em;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 .mat-button-container {
-    padding: 0em 0.5em 0.75em 0.25em;
     
 }
 
-.mat-button {
-    border: 2px solid;
-    border-radius: 0.25em;
-    font-weight: bold;
-    text-align: left;
-    padding: 1em;
-    width: 100%;
-}
-
-.button-48 {
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px ;
-    appearance: none;
-    background-color: #FFFFFF;
-    border-width: 0;
-    box-sizing: border-box;
-    color: #000000;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Clarkson, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1em;
+.navigation-paragraph {
     margin: 0;
-    opacity: 1;
-    outline: 1;
-    padding: 1.5em 2.2em;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-rendering: geometricprecision;
-    text-transform: uppercase;
-    transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1), background-color 100ms cubic-bezier(.694, 0, 0.335, 1), color 100ms cubic-bezier(.694, 0, 0.335, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    white-space: nowrap;
+    margin-left: 0.25em;
 }
 
-.button-48:before {
-    animation: opacityFallbackOut .5s step-end forwards;
-    backface-visibility: hidden;
-    background-color: #EBEBEB;
-    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transform: translateZ(0);
-    transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+.mat-button {
+    /*font-weight: bold;*/
+    display: flex;
+    justify-content: left !important;
+    border-radius: 0.5em;
+    text-align: left;
+    padding: 1em !important;
     width: 100%;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.button-48:hover:before {
-    animation: opacityFallbackIn 0s step-start forwards;
-    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+.mat-icon {
+    color: #aaa8b1 !important;
+    font-size: xx-large !important;
+    height: auto !important;
+    width: auto !important;
 }
 
-.button-48:after {
-    background-color: #FFFFFF;
-}
-
-.button-48 span {
-    z-index: 1;
-    position: relative;
+.mat-button:hover {
+    background-color: #E0E0E0;
 }
