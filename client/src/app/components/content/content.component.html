@@ -1,11 +1,11 @@
 <div>
-    <div *ngIf="mode === 'dashboard'">
+    <div *ngIf="(this.modeService.mode) === 'dashboard'">
         <app-content-dashboard></app-content-dashboard>
     </div>
-    <div *ngIf="mode === 'tasks'">
+    <div *ngIf="(this.modeService.mode) === 'tasks'">
         <app-content-tasks></app-content-tasks>
     </div>
-    <div *ngIf="mode === 'controller'">
+    <div *ngIf="(this.modeService.mode) === 'controller'">
         <app-content-controller></app-content-controller>
     </div>
 </div>

@@ -1,7 +1,6 @@
-@import './app/styles/utils.css';
-@import './app/styles/layout.css';
-@import './app/header/header.component.css';
-@import './variables.scss';
+@import './app/components/styles/utils.css';
+@import './app/components/styles/layout.css';
+@import './app/components/header/header.component.css';
 
 body {
     margin: 0;

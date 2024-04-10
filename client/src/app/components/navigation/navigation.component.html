@@ -3,7 +3,7 @@
         <button 
             mat-button 
             class="mat-button"
-            (click)="switchContent('dashboard')"
+            (click)="this.modeService.setMode('dashboard')"
         >
             <mat-icon>home</mat-icon>
             <p class="navigation-paragraph">Dashboard</p>
@@ -13,7 +13,7 @@
         <button 
             mat-button 
             class="mat-button"
-            (click)="switchContent('tasks')"
+            (click)="this.modeService.setMode('tasks')"
         >
             <mat-icon>task_alt</mat-icon>
             <p class="navigation-paragraph">Zadania</p>
@@ -23,7 +23,7 @@
         <button 
             mat-button 
             class="mat-button"
-            (click)="switchContent('controller')"
+            (click)="this.modeService.setMode('statistics')"
         >
             <mat-icon>gamepad</mat-icon>
             <p class="navigation-paragraph">Sterowanie</p>
