@@ -4,6 +4,7 @@ const app = express();
 const cors = require('cors');
 const start = require('./app.js');
 const createEndpoints = require('./routes/api');
+const setupDB = require('../config/mongoDBModule');
 
 app.use(express.static(path.join(__dirname, '../../client/dist/app/browser')));
 app.use(cors());
@@ -16,4 +17,5 @@ app.listen(process.env.PORT || 3000, () => {
     console.log(' App: http://localhost:3000/');
     createEndpoints(app);
     start();
+    setupDB();
 });

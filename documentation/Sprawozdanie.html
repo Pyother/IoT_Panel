@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sprawozdanie.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="piotr-sobol-sprawozdanie-mongodb">Piotr Sobol Sprawozdanie MongoDB</h1>
+<p>W ramach realizacji zajęć wybrałem ścieżkę <strong>MongoDB Node.js Developer Path</strong>, ponieważ wykorzystuję tą technologię w pracy i jestem z nią zaznajomiony. Zdobyte dzięki temu kursowi doświadczenie postanowiłem wykorzystać w praktyce, dodając bazę danych MongoDB do realizowanego obecnie projektu wykorzystującego Node.js jako backend.</p>
+<h2 id="wykorzystanie-bazy-danych-w-projekcie">Wykorzystanie bazy danych w projekcie</h2>
+<p>Celem projektu jest stworzenie aplikacji do obsługi własnoręcznie tworzonego autonomicznego robota mobilnego. Istotną rolę w projekcie pełnią zadania, czyli obiekty reprezentujące przejazd pojazdu z punktu początkowego do celu określonego przez użytkownika. Do realizacji tego projektu dobrze nadaje się baza MongoDB, oferuje ona dokumentową reprezentację danych. Pomiędzy obiektami nie występują powiązania, więc baza danych nie musi być relacyjna.</p>
+<h2 id=""></h2>
+<p>Realizacja kursu pozwoliła mi przede wszystkim uzyskać praktyczne umiejętności, pozwalające na:</p>
+<ul>
+<li>Wdrożenie bazy danych w projekcie NodeJS.</li>
+<li>Dodawanie i usuwanie dokumentów.</li>
+<li>Aktualizowanie dokumentów.</li>
+<li>Agregowanie danych.</li>
+</ul>
+<p>Wymienione techniki zostały w praktyczny sposób wykorzystane w projekcie. Skorzystałem z darmowej wersji bazy MongoDB i wdrożyłem ją w aplikacji. Do zarządzania bazą w aplikacji NodeJS niezbędne są trzy elementy:</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// * Global variables:</span>
+<span class="hljs-keyword">const</span> dbname = <span class="hljs-string">'iot-panel-db'</span>;
+<span class="hljs-keyword">const</span> collection_name = <span class="hljs-string">'tasks'</span>;
+<span class="hljs-keyword">let</span> client;
+<span class="hljs-keyword">let</span> collection;
+<span class="hljs-keyword">let</span> uri;
+</div></code></pre>
+<ul>
+<li><strong>Obiekt MongoClient</strong> - reprezentuje połączenie z bazą danych (znajdujacą się na w tym wypadku na serwerze GCP). Tworzona jest jedna instancja klienta, ponieważ więcej niekorzystnie wpływa na wydajność.</li>
+<li><strong>Kolekcja</strong> - odpowiednik tabeli z relacyjnej bazy danych. Nie musi mieć ściśle określonej formy. W projekcie wykorzystywana jest jedna kolekcja, reprezentująca zbiór zadań.</li>
+<li><strong>URI</strong> - Uniform Resource Identifier, to ciąg znaków służący do identyfikowania zasobów w sieci. Ponieważ projekt jest przechowywany na Githubie, zadbałem o to, aby hasło do bazy było wprowadzane przez użytkownika.</li>
+</ul>
+<h2 id="zastosowanie">Zastosowanie</h2>
+<p>Aby przetestować postawowe funkcje bazy danych, stowrzyłem prostą funkcję <strong>setupDB</strong>, mającą na celu nawiązanie łączności z bazą z poziomu aplikacji oraz dodanie do niej rekordu.</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// * Main function:</span>
+<span class="hljs-keyword">const</span> setupDB = <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> enterPassword();
+
+    <span class="hljs-comment">// Client initialization (only one instance): </span>
+    client = <span class="hljs-keyword">new</span> MongoClient(uri);
+    collection = client.db(dbname).collection(collection_name);
+
+    <span class="hljs-keyword">await</span> connectToDatabase();
+
+    createDocument().then(<span class="hljs-function">(<span class="hljs-params"><span class="hljs-built_in">document</span></span>) =&gt;</span> {
+        collection.insertOne(<span class="hljs-built_in">document</span>);
+        <span class="hljs-keyword">const</span> documentString = <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-built_in">document</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">2</span>);
+        logWithColor(<span class="hljs-string">`Document created and inserted into the database ✅ \n\n <span class="hljs-subst">${documentString}</span>`</span>, <span class="hljs-string">'green'</span>);
+    });
+}
+</div></code></pre>
+<p>Operacje odbywają się sekwencyjnie. Po wprowadzeniu przez użytkownika hasła do bazy danych tworzony jest nowy klient oraz kolekcja. Następnie użytkownik wprowadza kolejne dane konieczne do utworzenia nowego dokumentu, a następnie jest on dodawany do kolekcji.</p>
+<p><img src="image.png" alt="alt text"></p>
+<p>Dodane dokumenty można przeglądać i modyfikować z poziomu panelu użytkownika MongoDB. Każdy nowy dokument otrzymuje unikalne <strong>_id</strong>, tworzone automatycznie przez MongoDB.</p>
+<p><img src="image-1.png" alt="alt text"></p>
+<h2 id="podsumowanie">Podsumowanie</h2>
+<p>Kurs MongoDB pozwolił mi przede wszystkim zdobyć praktyczne umiejętności przydatne podczas tworzenia aplikacji internetowych. MongoDB oferuje bardzo wiele możliwości operacji na dokumentach. Pomimo że nie wykorzystałem na razie wszystkich z nich, to po zapoznaniu się z nimi wpadłem na pomysł kilku różnych opcji rozwoju projektu (np. wykorzystanie agregacji do tworzenia panelu statystyk).</p>
+<h2 id="%C5%BAr%C3%B3d%C5%82a">Źródła</h2>
+<ul>
+<li>Repozytorium z projektem: https://github.com/Pyother/IoT_Panel</li>
+<li>Kurs Node.js MongoDB W3Schools - https://github.com/Pyother/IoT_Panel</li>
+</ul>
+
+</body>
+</html>
