@@ -4,6 +4,7 @@
             mat-button 
             class="mat-button"
             (click)="this.modeService.setMode('dashboard')"
+            [ngStyle]="{'fontWeight' : (this.modeService.mode === 'dashboard') ? 'bold' : ''}"
         >
             <mat-icon>home</mat-icon>
             <p class="navigation-paragraph">Dashboard</p>
@@ -14,6 +15,7 @@
             mat-button 
             class="mat-button"
             (click)="this.modeService.setMode('tasks')"
+            [ngStyle]="{'fontWeight' : (this.modeService.mode === 'tasks') ? 'bold' : ''}"
         >
             <mat-icon>task_alt</mat-icon>
             <p class="navigation-paragraph">Zadania</p>
@@ -23,7 +25,8 @@
         <button 
             mat-button 
             class="mat-button"
-            (click)="this.modeService.setMode('statistics')"
+            (click)="this.modeService.setMode('controller')"
+            [ngStyle]="{'fontWeight' : (this.modeService.mode === 'controller') ? 'bold' : ''}"
         >
             <mat-icon>gamepad</mat-icon>
             <p class="navigation-paragraph">Sterowanie</p>

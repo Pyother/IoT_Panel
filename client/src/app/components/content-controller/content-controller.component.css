@@ -1,0 +1,15 @@
+@import '../content/content.component.css';
+
+.info-line {
+    padding-top: 1em;
+}
+
+.connection-status-container {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid lightgrey;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: #F6F4F5;
+}

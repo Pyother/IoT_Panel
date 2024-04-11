@@ -4,11 +4,7 @@
     width: calc(100% - 2px - 1em);
     height: 100%;
     padding: 0.5em;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-}
-
-.mat-button-container {
-    
+    border: 1px solid lightgrey;
 }
 
 .navigation-paragraph {

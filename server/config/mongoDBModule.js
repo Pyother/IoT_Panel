@@ -30,7 +30,7 @@ const enterPassword = async () => {
 const connectToDatabase = async () => {
     try {
         await client.connect();
-        logWithColor('Database connected ✅', 'green');
+        logWithColor('✅ Database connected', 'green');
     } catch (err) {
         console.error("Error connecting to the database", err); 
     }
