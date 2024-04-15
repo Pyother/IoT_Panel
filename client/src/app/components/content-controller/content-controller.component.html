@@ -1,19 +1,75 @@
-<mat-list class="mat-list" role="list">
-    <mat-list-item>
-        <h3 class="content-h3">Kontroler pojazdu</h3>
-        <p class="content-paragraph">Panel umożliwiający zdalne sterowanie urządzeniem.</p>
-    </mat-list-item>
-    <mat-list-item class="info-line">
-        <div *ngIf="this.globalStateService.connection" class="connection-status-container">
-            <mat-icon style="color: green">check_circle_outline</mat-icon>
-            <p class="content-paragraph" style="margin-left: 0.5em;">Połączono z urządzeniem</p>
+<div>
+    <mat-list class="mat-list" role="list">
+        <mat-list-item>
+            <h3 class="content-h3">Kontroler pojazdu</h3>
+            <p class="content-paragraph">Panel umożliwiający zdalne sterowanie urządzeniem.</p>
+        </mat-list-item>
+        <mat-list-item class="info-line">
+            <div *ngIf="this.globalStateService.connection" class="connection-status-container">
+                <mat-icon style="color: green">check_circle_outline</mat-icon>
+                <p class="content-paragraph" style="margin-left: 0.5em;">Połączono z urządzeniem</p>
+            </div>
+            <div *ngIf="!this.globalStateService.connection" class="connection-status-container">
+                <mat-icon style="color: red">error_outline</mat-icon>
+                <p class="content-paragraph" style="margin-left: 0.5em;">Brak połączenia</p>
+            </div>
+        </mat-list-item>   
+    </mat-list>
+    <div class="controller-grid-container">
+        <div class="map-container">
+            
         </div>
-        <div *ngIf="!this.globalStateService.connection" class="connection-status-container">
-            <mat-icon style="color: red">error_outline</mat-icon>
-            <p class="content-paragraph" style="margin-left: 0.5em;">Brak połączenia</p>
+        <div class="controller-container">
+            <div class="row">
+                <div class="cell">
+                    <button 
+                        class="controller-button"
+                    >
+                        <mat-icon style="transform: rotate(-45deg)">keyboard_arrow_up</mat-icon>
+                    </button>
+                </div>
+                <div class="cell">
+                    <button class="controller-button">
+                        <mat-icon>keyboard_arrow_up</mat-icon>
+                    </button>
+                </div>
+                <div class="cell">
+                    <button class="controller-button">
+                        <mat-icon style="transform: rotate(45deg)">keyboard_arrow_up</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                    <button class="controller-button">
+                        <mat-icon>chevron_left</mat-icon>
+                    </button>
+                </div>
+                <div class="cell" style="padding: 1.7em;">
+                </div>
+                <div class="cell">
+                    <button class="controller-button">
+                        <mat-icon>chevron_right</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                    <button class="controller-button">
+                        <mat-icon style="transform: rotate(45deg)">keyboard_arrow_down</mat-icon>
+                    </button>
+                </div>
+                <div class="cell">
+                    <button class="controller-button">
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+                    </button>
+                </div>
+                <div class="cell">
+                    <button class="controller-button">
+                        <mat-icon style="transform: rotate(-45deg)">keyboard_arrow_down</mat-icon>
+                    </button>
+                </div>
+            </div>
         </div>
-    </mat-list-item>
-    <mat-list-item class="controller-container">
-        
-    </mat-list-item>    
-</mat-list>
+    </div>
+</div>

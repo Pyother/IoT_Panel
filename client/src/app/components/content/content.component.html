@@ -1,11 +1,11 @@
-<div>
+<div style="height: -webkit-fill-available;">
     <div *ngIf="(this.modeService.mode) === 'dashboard'">
-        <app-content-dashboard></app-content-dashboard>
+        <app-content-dashboard id="dashboard"></app-content-dashboard>
     </div>
     <div *ngIf="(this.modeService.mode) === 'tasks'">
-        <app-content-tasks></app-content-tasks>
+        <app-content-tasks id="tasks"></app-content-tasks>
     </div>
-    <div *ngIf="(this.modeService.mode) === 'controller'">
-        <app-content-controller></app-content-controller>
+    <div *ngIf="(this.modeService.mode) === 'controller'" style="height: -webkit-fill-available;">
+        <app-content-controller style="height: -webkit-fill-available !important; display: grid;"></app-content-controller>
     </div>
 </div>

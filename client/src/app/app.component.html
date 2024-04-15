@@ -7,18 +7,18 @@
 </mat-grid-list>
 <mat-grid-list cols="5" class="central-container">
     <mat-grid-tile class="navigation tile" [colspan]="isLargeScreen ? 1 : 0">
-        <div class="tile-cell" style="margin-right: 0">
+        <div class="tile-cell" style="margin-right: 0; margin-bottom: 0;">
             <app-navigation class="app-navigation"></app-navigation>
         </div>
     </mat-grid-tile>
     <mat-grid-tile class="content tile" [colspan]="isLargeScreen ? 4 : 5">
-        <div class="tile-cell center">
+        <div class="tile-cell center" style="margin-bottom: 0;">
             <app-content class="app-content"></app-content>
         </div>
     </mat-grid-tile>
 </mat-grid-list>
 <mat-grid-list cols="1" rowHeight="5em">
-    <mat-grid-tile class="tile">
+    <mat-grid-tile class="tile" id="footer">
         <div class="tile-cell footer" style="margin-top: 0">
             © 2024 Piotr Sobol | All rights reserved
         </div>

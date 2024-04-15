@@ -2,8 +2,12 @@
     width: 100%;
 }
 
+.app-navigation {
+    height: calc(100% - 2px);
+}
+
 .app-content {
-    height: 100%;
+    height: calc(100% - 2px);
 }
 
 .tile-cell {
@@ -32,6 +36,7 @@
     align-items: center;
     font-size: small;
     justify-content: center;
+    height: 5em;
 }
 
 @media (max-width: 768px) {
