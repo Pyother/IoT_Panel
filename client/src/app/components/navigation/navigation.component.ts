@@ -19,6 +19,6 @@ import { ModeService } from '../../services/mode.service';
 
 export class NavigationComponent {
   constructor(public modeService: ModeService) {
-    this.modeService.mode = 'dashboard';
+    this.modeService.mode = 'controller';
   }
 }

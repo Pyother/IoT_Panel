@@ -6,7 +6,7 @@ export class GlobalStateService {
     public connection: boolean;
 
     constructor() {
-        this.displayedContent = 'dashboard';
+        this.displayedContent = 'controller';
         this.connection = false;
     }
 

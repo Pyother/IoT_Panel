@@ -1,10 +1,23 @@
-
-#dashboard {
+#app-content-dashboard {
 
 }
 
-#tasks {
+#app-content-tasks {
 
+}
+
+#app-content-controller {
+    height: -webkit-fill-available !important; 
+    display: grid;
+}
+
+#app-content-controller .content {
+    height: -webkit-fill-available;
+    margin-left: 0.5em;
+}
+
+.content {
+    margin-left: 0.5em;
 }
 
 .controller {

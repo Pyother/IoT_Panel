@@ -11,6 +11,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { ContentComponent } from './components/content/content.component';
 
+// * Providers:
+import { Scene } from './data_visualization/Scene';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,9 @@ import { ContentComponent } from './components/content/content.component';
     NavigationComponent,
     ContentComponent,
   ],
-  providers: [],
+  providers: [
+    Scene
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

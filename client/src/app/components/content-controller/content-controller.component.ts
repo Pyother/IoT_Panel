@@ -6,7 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatGridListModule } from '@angular/material/grid-list';
-
+import { MapComponent } from '../map/map.component';
+ 
 // * Services:
 import { GlobalStateService } from '../../services/globalState.service';
 
@@ -20,6 +21,7 @@ import { GlobalStateService } from '../../services/globalState.service';
     MatButtonModule,
     MatTooltipModule,
     MatGridListModule,
+    MapComponent,
   ],
   templateUrl: './content-controller.component.html',
   styleUrl: './content-controller.component.css'
