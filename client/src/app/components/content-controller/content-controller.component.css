@@ -59,6 +59,12 @@
     padding: 0.5em;
 }
 
+@media (max-width: 768px) {
+    .map-container {
+        display: none;
+    }
+}
+
 @media (min-width: 768px) {
     .controller-grid-container {
         height: calc(100% - 8.5em);

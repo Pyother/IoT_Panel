@@ -1,5 +1,5 @@
 // * Angular modules:
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MapComponent } from '../map/map.component';
+import { io } from "socket.io-client";
  
 // * Services:
 import { GlobalStateService } from '../../services/globalState.service';
@@ -27,7 +28,13 @@ import { GlobalStateService } from '../../services/globalState.service';
   styleUrl: './content-controller.component.css'
 })
 export class ContentControllerComponent {
+
+  public socket = io("http://localhost:3000");
+
   constructor(public globalStateService: GlobalStateService) {
     
   }
+
+  @ViewChild(MapComponent) 
+  public mapComponent!: MapComponent;
 }

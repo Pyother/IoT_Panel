@@ -24,48 +24,94 @@
                 <div class="cell">
                     <button 
                         class="controller-button"
+                        (click)="
+                            this.socket.emit('message', [-1, 1]);
+                            this.mapComponent.moveUpLeft();
+                        "
                     >
                         <mat-icon style="transform: rotate(-45deg)">keyboard_arrow_up</mat-icon>
                     </button>
                 </div>
                 <div class="cell">
-                    <button class="controller-button">
+                    <button 
+                        class="controller-button"
+                        (click)="
+                            this.socket.emit('message', [0, 1]);
+                            this.mapComponent.moveUp();
+                        "
+                    >
                         <mat-icon>keyboard_arrow_up</mat-icon>
                     </button>
                 </div>
                 <div class="cell">
-                    <button class="controller-button">
+                    <button 
+                        class="controller-button"
+                        (click)="
+                            this.socket.emit('message', [1, 1]);
+                            this.mapComponent.moveUpRight();
+                        "
+                    >
                         <mat-icon style="transform: rotate(45deg)">keyboard_arrow_up</mat-icon>
                     </button>
                 </div>
             </div>
             <div class="row">
                 <div class="cell">
-                    <button class="controller-button">
+                    <button 
+                        class="controller-button"
+                        (click)="
+                            this.socket.emit('message', [-1, 0]);
+                            this.mapComponent.moveLeft();
+                        "
+                    >
                         <mat-icon>chevron_left</mat-icon>
                     </button>
                 </div>
                 <div class="cell" style="padding: 1.7em;">
                 </div>
                 <div class="cell">
-                    <button class="controller-button">
+                    <button 
+                        class="controller-button"
+                        (click)="
+                            this.socket.emit('message', [1, 0]);
+                            this.mapComponent.moveRight();
+                        "
+                    >
                         <mat-icon>chevron_right</mat-icon>
                     </button>
                 </div>
             </div>
             <div class="row">
                 <div class="cell">
-                    <button class="controller-button">
+                    <button 
+                        class="controller-button"
+                        (click)="
+                            this.socket.emit('message', [-1, -1]);
+                            this.mapComponent.moveDownLeft();
+                        "
+                    >
                         <mat-icon style="transform: rotate(45deg)">keyboard_arrow_down</mat-icon>
                     </button>
                 </div>
                 <div class="cell">
-                    <button class="controller-button">
+                    <button 
+                        class="controller-button"
+                        (click)="
+                            this.socket.emit('message', [0, -1]);
+                            this.mapComponent.moveDown();
+                        "
+                    >
                         <mat-icon>keyboard_arrow_down</mat-icon>
                     </button>
                 </div>
                 <div class="cell">
-                    <button class="controller-button">
+                    <button 
+                        class="controller-button"
+                        (click)="
+                            this.socket.emit('message', [1, -1]);
+                            this.mapComponent.moveDownRight();
+                        "
+                    >
                         <mat-icon style="transform: rotate(-45deg)">keyboard_arrow_down</mat-icon>
                     </button>
                 </div>
