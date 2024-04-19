@@ -26,7 +26,7 @@
                         class="controller-button"
                         (click)="
                             this.socket.emit('message', [-1, 1]);
-                            this.mapComponent.moveUpLeft();
+                            this.mapComponent.moveObject(-0.5, 0, 0.5);
                         "
                     >
                         <mat-icon style="transform: rotate(-45deg)">keyboard_arrow_up</mat-icon>
@@ -37,7 +37,7 @@
                         class="controller-button"
                         (click)="
                             this.socket.emit('message', [0, 1]);
-                            this.mapComponent.moveUp();
+                            this.mapComponent.moveObject(0, 0, 0.5);
                         "
                     >
                         <mat-icon>keyboard_arrow_up</mat-icon>
@@ -48,7 +48,7 @@
                         class="controller-button"
                         (click)="
                             this.socket.emit('message', [1, 1]);
-                            this.mapComponent.moveUpRight();
+                            this.mapComponent.moveObject(0.5, 0, 0.5);
                         "
                     >
                         <mat-icon style="transform: rotate(45deg)">keyboard_arrow_up</mat-icon>
@@ -61,7 +61,7 @@
                         class="controller-button"
                         (click)="
                             this.socket.emit('message', [-1, 0]);
-                            this.mapComponent.moveLeft();
+                            this.mapComponent.moveObject(-0.5, 0, 0);
                         "
                     >
                         <mat-icon>chevron_left</mat-icon>
@@ -74,7 +74,7 @@
                         class="controller-button"
                         (click)="
                             this.socket.emit('message', [1, 0]);
-                            this.mapComponent.moveRight();
+                            this.mapComponent.moveObject(0.5, 0, 0);
                         "
                     >
                         <mat-icon>chevron_right</mat-icon>
@@ -87,7 +87,7 @@
                         class="controller-button"
                         (click)="
                             this.socket.emit('message', [-1, -1]);
-                            this.mapComponent.moveDownLeft();
+                            this.mapComponent.moveObject(-0.5, 0, -0.5);
                         "
                     >
                         <mat-icon style="transform: rotate(45deg)">keyboard_arrow_down</mat-icon>
@@ -98,7 +98,7 @@
                         class="controller-button"
                         (click)="
                             this.socket.emit('message', [0, -1]);
-                            this.mapComponent.moveDown();
+                            this.mapComponent.moveObject(0, 0, -0.5);
                         "
                     >
                         <mat-icon>keyboard_arrow_down</mat-icon>
@@ -109,7 +109,7 @@
                         class="controller-button"
                         (click)="
                             this.socket.emit('message', [1, -1]);
-                            this.mapComponent.moveDownRight();
+                            this.mapComponent.moveObject(0.5, 0, -0.5);
                         "
                     >
                         <mat-icon style="transform: rotate(-45deg)">keyboard_arrow_down</mat-icon>

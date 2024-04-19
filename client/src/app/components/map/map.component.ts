@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 @Component({
   selector: 'app-map',
@@ -84,62 +84,11 @@ export class MapComponent implements OnInit {
     this.scene.add(line);
   }
 
-  moveUp() {
+  moveObject(moveX: number, moveY: number, moveZ: number) {
     const startPosition = this.cube.position.clone();
-    this.cube.position.z += 0.5;
-    const endPosition = this.cube.position.clone();
-    this.createLine(startPosition, endPosition);
-  }
-
-  moveUpLeft() {
-    const startPosition = this.cube.position.clone();
-    this.cube.position.z += 0.5;
-    this.cube.position.x -= 0.5;
-    const endPosition = this.cube.position.clone();
-    this.createLine(startPosition, endPosition);
-  }
-
-  moveUpRight() {
-    const startPosition = this.cube.position.clone();
-    this.cube.position.z += 0.5;
-    this.cube.position.x += 0.5;
-    const endPosition = this.cube.position.clone();
-    this.createLine(startPosition, endPosition);
-  }
-
-  moveDown() {
-    const startPosition = this.cube.position.clone();
-    this.cube.position.z -= 0.5;
-    const endPosition = this.cube.position.clone();
-    this.createLine(startPosition, endPosition);
-  }
-
-  moveDownLeft() {
-    const startPosition = this.cube.position.clone();
-    this.cube.position.z -= 0.5;
-    this.cube.position.x -= 0.5;
-    const endPosition = this.cube.position.clone();
-    this.createLine(startPosition, endPosition);
-  }
-
-  moveDownRight() {
-    const startPosition = this.cube.position.clone();
-    this.cube.position.z -= 0.5;
-    this.cube.position.x += 0.5;
-    const endPosition = this.cube.position.clone();
-    this.createLine(startPosition, endPosition);
-  }
-
-  moveLeft() {
-    const startPosition = this.cube.position.clone();
-    this.cube.position.x -= 0.5;
-    const endPosition = this.cube.position.clone();
-    this.createLine(startPosition, endPosition);
-  }
-
-  moveRight() {
-    const startPosition = this.cube.position.clone();
-    this.cube.position.x += 0.5;
+    this.cube.position.x += moveX;
+    this.cube.position.y += moveY;
+    this.cube.position.z += moveZ;
     const endPosition = this.cube.position.clone();
     this.createLine(startPosition, endPosition);
   }

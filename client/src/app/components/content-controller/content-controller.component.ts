@@ -32,7 +32,11 @@ export class ContentControllerComponent {
   public socket = io("http://localhost:3000");
 
   constructor(public globalStateService: GlobalStateService) {
-    
+    this.socket.on("position_update", (data: any) => {
+      const commands = JSON.parse(data);
+      console.log("Position update: " + data);
+      this.mapComponent.moveObject(commands[0], commands[1], commands[2]);
+    });
   }
 
   @ViewChild(MapComponent) 

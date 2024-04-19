@@ -24,6 +24,10 @@ const mqttController = (broker, topic) => {
             console.log("Connection established");
         }
 
+        if(messageString === "moveUp") {
+            
+        }
+
     });
 }
 
